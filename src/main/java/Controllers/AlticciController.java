@@ -16,7 +16,7 @@ public class AlticciController {
     AlticciService service;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     public String GetAlticci(@QueryParam("number") int number)
     {
         try
