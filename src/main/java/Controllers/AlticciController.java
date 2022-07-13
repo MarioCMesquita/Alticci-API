@@ -16,12 +16,12 @@ public class AlticciController {
     AlticciService service;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String GetAlticci(@QueryParam("number") int number)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Integer GetAlticci(@QueryParam("number") int number)
     {
         try
         {
-           return "Result: " + service.GetAlticci(number);
+           return service.GetAlticci(number);
         }
         catch (Exception ex)
         {
